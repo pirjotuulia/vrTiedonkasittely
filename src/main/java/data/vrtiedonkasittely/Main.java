@@ -8,6 +8,7 @@ package data;
 import com.google.gson.Gson;
 import data.vrtiedonkasittely.Asema;
 import data.vrtiedonkasittely.Risteysasema;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -17,6 +18,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -33,7 +35,7 @@ import org.apache.commons.io.IOUtils;
 public class Main {
 
     private static Set<Asema> asemat = new HashSet<>();
-    private static Map<String, Set<String>> risteysasemat = new HashMap<>();
+    private static Map<String, TreeSet<String>> risteysasemat = new HashMap<>();
     private static List<Risteysasema> risteyspaikat = new ArrayList<>();
     private static JSONArray risteysjson = new JSONArray();
 
@@ -57,14 +59,19 @@ public class Main {
         //       risteyspaikat.stream().forEach(System.out::println);
         System.out.println("Matkustajaliikenteen mahdollisia risteyspaikkoja " + risteyspaikat.size());
         risteysAsematJsoniksi();
-        System.out.println(risteysjson);
-        try {
-            File risteysasemaJson = new File("risteysasemat.json");
-            Files.newBufferedWriter(risteysasemaJson.toPath(), StandardCharsets.UTF_8).write(risteysjson.toString());
-            System.out.println("kirjoitettu!");
-        } catch (IOException e) {
-            e.printStackTrace();
+        jsonTiedostoon("risteysasemat.json");
+        Set<String> kaikkiRadat = radatSettiin();
+        System.out.println(kaikkiRadat.stream().distinct().count());
+        Set<String> matkustajaliikenneradat = risteysasemienRadatSettiin();
+        System.out.println(matkustajaliikenneradat.stream().distinct().count());
+    }
+
+    private static Set<String> radatSettiin() {
+        Set<String> kaikkiRadat = new TreeSet();
+        for (Asema a : asemat) {
+            kaikkiRadat.add(a.getTrack());
         }
+        return kaikkiRadat;
     }
 
     private static void irrotaRatatiedot(JSONArray json) {
@@ -88,7 +95,7 @@ public class Main {
 
     private static void selvitäRisteysasemat() {
         for (Asema as : asemat) {
-            risteysasemat.putIfAbsent(as.getStation(), new HashSet());
+            risteysasemat.putIfAbsent(as.getStation(), new TreeSet());
             risteysasemat.get(as.getStation()).add(as.getTrack());
         }
         System.out.println("Risteysasemat ennen poistoa " + risteysasemat.size());
@@ -129,5 +136,27 @@ public class Main {
             asema.put("tracks", rataluettelo);
             risteysjson.add(asema);
         }
+    }
+
+    private static void jsonTiedostoon(String risteysasematjson) {
+        Path tiedosto = Paths.get("risteysasemat.json");
+        try (BufferedWriter writer
+                = Files.newBufferedWriter(tiedosto, StandardCharsets.UTF_8,
+                        StandardOpenOption.WRITE)) {
+            writer.write(risteysjson.toJSONString());
+            System.out.println("kirjoitettu");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static Set<String> risteysasemienRadatSettiin() {
+        Set<String> kaikkiRadat = new TreeSet();
+        for (Risteysasema a : risteyspaikat) {
+            for (String rata : a.getRadat()) {
+                kaikkiRadat.add(rata);
+            }
+        }
+        return kaikkiRadat;
     }
 }

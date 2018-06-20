@@ -15,9 +15,9 @@ public class Risteysasema {
 
     private String tunnus;
     private String nimi;
-    private Set<String> radat;
+    private TreeSet<String> radat;
 
-    public Risteysasema(String tunnus, String nimi, Set<String> radat) {
+    public Risteysasema(String tunnus, String nimi, TreeSet<String> radat) {
         this.tunnus = tunnus;
         this.nimi = nimi;
         this.radat = radat;
