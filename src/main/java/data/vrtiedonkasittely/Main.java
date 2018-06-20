@@ -5,11 +5,18 @@
  */
 package data;
 
+import com.google.gson.Gson;
 import data.vrtiedonkasittely.Asema;
 import data.vrtiedonkasittely.Risteysasema;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -28,6 +35,7 @@ public class Main {
     private static Set<Asema> asemat = new HashSet<>();
     private static Map<String, Set<String>> risteysasemat = new HashMap<>();
     private static List<Risteysasema> risteyspaikat = new ArrayList<>();
+    private static JSONArray risteysjson = new JSONArray();
 
     public static void main(String[] args) throws IOException {
         JSONParser parser = new JSONParser();
@@ -46,14 +54,17 @@ public class Main {
         irrotaRatatiedot(radat);
         selvitäRisteysasemat();
         lisaaAsemienNimet(asemienNimet);
-        risteyspaikat.stream().forEach(System.out::println);
+        //       risteyspaikat.stream().forEach(System.out::println);
         System.out.println("Matkustajaliikenteen mahdollisia risteyspaikkoja " + risteyspaikat.size());
-//        Risteysasema s = risteyspaikat.get(0);
-//        JSONObject asema = new JSONObject();
-//        asema.put("stationShortCode", s.getTunnus());
-//        asema.put("stationName", s.getNimi());
-//        asema.put("radat", )
-        System.out.println("");
+        risteysAsematJsoniksi();
+        System.out.println(risteysjson);
+        try {
+            File risteysasemaJson = new File("risteysasemat.json");
+            Files.newBufferedWriter(risteysasemaJson.toPath(), StandardCharsets.UTF_8).write(risteysjson.toString());
+            System.out.println("kirjoitettu!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private static void irrotaRatatiedot(JSONArray json) {
@@ -100,6 +111,23 @@ public class Main {
                 Risteysasema rist = new Risteysasema(tunnus, nimi, risteysasemat.get(tunnus));
                 risteyspaikat.add(rist);
             }
+        }
+    }
+
+    private static void risteysAsematJsoniksi() {
+        for (Risteysasema s : risteyspaikat) {
+            JSONObject asema = new JSONObject();
+            asema.put("stationShortCode", s.getTunnus());
+            asema.put("stationName", s.getNimi());
+            JSONArray rataluettelo = new JSONArray();
+            Set<String> ratalista = s.getRadat();
+            for (String r : ratalista) {
+                JSONObject ratanumero = new JSONObject();
+                ratanumero.put("track", r);
+                rataluettelo.add(ratanumero);
+            }
+            asema.put("tracks", rataluettelo);
+            risteysjson.add(asema);
         }
     }
 }
