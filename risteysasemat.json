@@ -169,7 +169,7 @@
 }, {
   "tunnus" : "VAR",
   "nimi" : "Varkaus",
-  "radat" : [ "024", "VAR 034" ]
+  "radat" : [ "024", "611", "VAR 034" ]
 }, {
   "tunnus" : "VNJ",
   "nimi" : "Viinijärvi",
