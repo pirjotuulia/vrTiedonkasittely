@@ -1,181 +1,97 @@
 [ {
-  "tunnus" : "HPJ",
-  "nimi" : "Haapajärvi",
-  "radat" : [ "004", "087" ]
+  "station" : "TL",
+  "name" : "Toijala",
+  "track" : [ "321", "003" ]
 }, {
-  "tunnus" : "HPK",
-  "nimi" : "Haapamäki",
-  "radat" : [ "023", "066" ]
+  "station" : "ILM",
+  "name" : "Iisalmi",
+  "track" : [ "005", "087" ]
 }, {
-  "tunnus" : "HVA",
-  "nimi" : "Harjavalta",
-  "radat" : [ "002", "HVA 367" ]
+  "station" : "PM",
+  "name" : "Pieksämäki asema",
+  "track" : [ "023", "024", "005" ]
 }, {
-  "tunnus" : "HKI",
-  "nimi" : "Helsinki asema",
-  "radat" : [ "001", "003" ]
+  "station" : "RI",
+  "name" : "Riihimäki asema",
+  "track" : [ "003", "006" ]
 }, {
-  "tunnus" : "HPL",
-  "nimi" : "Huopalahti",
-  "radat" : [ "001", "123" ]
+  "station" : "PAR",
+  "name" : "Parikkala",
+  "track" : [ "014", "006" ]
 }, {
-  "tunnus" : "HY",
-  "nimi" : "Hyvinkää",
-  "radat" : [ "003", "141", "HY 323" ]
+  "station" : "JY",
+  "name" : "Jyväskylä",
+  "track" : [ "023", "004", "009" ]
 }, {
-  "tunnus" : "ILM",
-  "nimi" : "Iisalmi",
-  "radat" : [ "005", "087" ]
+  "station" : "TKU",
+  "name" : "Turku asema",
+  "track" : [ "001", "321" ]
 }, {
-  "tunnus" : "JNS",
-  "nimi" : "Joensuu asema",
-  "radat" : [ "006", "722", "731" ]
+  "station" : "HPJ",
+  "name" : "Haapajärvi",
+  "track" : [ "004", "087" ]
 }, {
-  "tunnus" : "JY",
-  "nimi" : "Jyväskylä",
-  "radat" : [ "004", "009", "023" ]
+  "station" : "OL",
+  "name" : "Oulu asema",
+  "track" : [ "531", "008" ]
 }, {
-  "tunnus" : "JÄS",
-  "nimi" : "Jämsä",
-  "radat" : [ "009", "363" ]
+  "station" : "KV",
+  "name" : "Kouvola asema",
+  "track" : [ "221", "005", "006" ]
 }, {
-  "tunnus" : "KAJ",
-  "nimi" : "Kajaani",
-  "radat" : [ "005", "557" ]
+  "station" : "KON",
+  "name" : "Kontiomäki",
+  "track" : [ "531", "005", "006" ]
 }, {
-  "tunnus" : "KR",
-  "nimi" : "Karjaa",
-  "radat" : [ "001", "141", "142" ]
+  "station" : "TPE",
+  "name" : "Tampere asema",
+  "track" : [ "003", "009" ]
 }, {
-  "tunnus" : "KEM",
-  "nimi" : "Kemi",
-  "radat" : [ "008", "517", "KEM PAJ" ]
+  "station" : "OV",
+  "name" : "Orivesi",
+  "track" : [ "066", "009" ]
 }, {
-  "tunnus" : "KJÄ",
-  "nimi" : "Kemijärvi",
-  "radat" : [ "008", "527", "KJÄ 936" ]
+  "station" : "KE",
+  "name" : "Kerava asema",
+  "track" : [ "003", "125" ]
 }, {
-  "tunnus" : "KE",
-  "nimi" : "Kerava asema",
-  "radat" : [ "003", "125", "131", "KE 666" ]
+  "station" : "SAV",
+  "name" : "Savio",
+  "track" : [ "003", "125" ]
 }, {
-  "tunnus" : "KKI",
-  "nimi" : "Kokemäki",
-  "radat" : [ "002", "342" ]
+  "station" : "HPL",
+  "name" : "Huopalahti",
+  "track" : [ "001", "123" ]
 }, {
-  "tunnus" : "KOK",
-  "nimi" : "Kokkola",
-  "radat" : [ "008", "417" ]
+  "station" : "HKI",
+  "name" : "Helsinki asema",
+  "track" : [ "001", "003" ]
 }, {
-  "tunnus" : "KON",
-  "nimi" : "Kontiomäki",
-  "radat" : [ "005", "006", "531", "552", "554", "KON 101" ]
+  "station" : "HY",
+  "name" : "Hyvinkää",
+  "track" : [ "003", "141" ]
 }, {
-  "tunnus" : "KV",
-  "nimi" : "Kouvola asema",
-  "radat" : [ "005", "006", "221", "232" ]
+  "station" : "PSL",
+  "name" : "Pasila asema",
+  "track" : [ "001", "003" ]
 }, {
-  "tunnus" : "KÄP",
-  "nimi" : "Käpylä",
-  "radat" : [ "003", "ILR 650" ]
+  "station" : "SK",
+  "name" : "Seinäjoki asema",
+  "track" : [ "066", "431", "003", "008" ]
 }, {
-  "tunnus" : "LH",
-  "nimi" : "Lahti",
-  "radat" : [ "006", "251", "252", "253" ]
+  "station" : "VNJ",
+  "name" : "Viinijärvi",
+  "track" : [ "024", "731" ]
 }, {
-  "tunnus" : "LIS",
-  "nimi" : "Lieksa",
-  "radat" : [ "006", "713" ]
+  "station" : "JNS",
+  "name" : "Joensuu asema",
+  "track" : [ "731", "006" ]
 }, {
-  "tunnus" : "NOA",
-  "nimi" : "Nokia",
-  "radat" : [ "002", "NOA 051" ]
+  "station" : "KR",
+  "name" : "Karjaa",
+  "track" : [ "001", "141", "142" ]
 }, {
-  "tunnus" : "OV",
-  "nimi" : "Orivesi",
-  "radat" : [ "009", "066" ]
-}, {
-  "tunnus" : "OL",
-  "nimi" : "Oulu asema",
-  "radat" : [ "008", "531" ]
-}, {
-  "tunnus" : "PTO",
-  "nimi" : "Paltamo",
-  "radat" : [ "531", "PTO 021" ]
-}, {
-  "tunnus" : "PAR",
-  "nimi" : "Parikkala",
-  "radat" : [ "006", "014" ]
-}, {
-  "tunnus" : "PKO",
-  "nimi" : "Parkano",
-  "radat" : [ "003", "351" ]
-}, {
-  "tunnus" : "PSL",
-  "nimi" : "Pasila asema",
-  "radat" : [ "001", "003", "ILR 650" ]
-}, {
-  "tunnus" : "PM",
-  "nimi" : "Pieksämäki asema",
-  "radat" : [ "005", "023", "024" ]
-}, {
-  "tunnus" : "PRI",
-  "nimi" : "Pori",
-  "radat" : [ "002", "350", "PRI Pur" ]
-}, {
-  "tunnus" : "PHÄ",
-  "nimi" : "Pyhäsalmi",
-  "radat" : [ "087", "620" ]
-}, {
-  "tunnus" : "PNÄ",
-  "nimi" : "Pännäinen",
-  "radat" : [ "008", "415" ]
-}, {
-  "tunnus" : "RI",
-  "nimi" : "Riihimäki asema",
-  "radat" : [ "003", "006", "RI 060" ]
-}, {
-  "tunnus" : "SAU",
-  "nimi" : "Saunakallio",
-  "radat" : [ "003", "SAU 744" ]
-}, {
-  "tunnus" : "SAV",
-  "nimi" : "Savio",
-  "radat" : [ "003", "125" ]
-}, {
-  "tunnus" : "SK",
-  "nimi" : "Seinäjoki asema",
-  "radat" : [ "003", "008", "066", "431", "441" ]
-}, {
-  "tunnus" : "SIJ",
-  "nimi" : "Siilinjärvi Asema",
-  "radat" : [ "005", "017", "SIJ 030", "SIJ 662" ]
-}, {
-  "tunnus" : "TPE",
-  "nimi" : "Tampere asema",
-  "radat" : [ "003", "009" ]
-}, {
-  "tunnus" : "TKL",
-  "nimi" : "Tikkurila asema",
-  "radat" : [ "003", "TKL HAK" ]
-}, {
-  "tunnus" : "TL",
-  "nimi" : "Toijala",
-  "radat" : [ "003", "314", "321" ]
-}, {
-  "tunnus" : "TKU",
-  "nimi" : "Turku asema",
-  "radat" : [ "001", "321", "332" ]
-}, {
-  "tunnus" : "VAR",
-  "nimi" : "Varkaus",
-  "radat" : [ "024", "611", "VAR 034" ]
-}, {
-  "tunnus" : "VNJ",
-  "nimi" : "Viinijärvi",
-  "radat" : [ "024", "731" ]
-}, {
-  "tunnus" : "VLP",
-  "nimi" : "Vilppula",
-  "radat" : [ "066", "373", "VLP 209" ]
+  "station" : "HPK",
+  "name" : "Haapamäki",
+  "track" : [ "066", "023" ]
 } ]

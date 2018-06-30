@@ -1,1603 +1,725 @@
 [ {
-  "station" : "KE__V661",
-  "track" : "131"
-}, {
-  "station" : "YKST",
-  "track" : "417"
-}, {
-  "station" : "JPA",
-  "track" : "008"
-}, {
-  "station" : "MKO",
-  "track" : "006"
-}, {
-  "station" : "VEH",
-  "track" : "123"
-}, {
-  "station" : "OLK",
-  "track" : "003"
-}, {
-  "station" : "RPH",
-  "track" : "023"
-}, {
-  "station" : "AIN",
-  "track" : "003"
-}, {
-  "station" : "MYN",
-  "track" : "332"
-}, {
-  "station" : "KVLA",
-  "track" : "006"
-}, {
-  "station" : "KVLA",
-  "track" : "005"
-}, {
-  "station" : "KJÄ",
-  "track" : "KJÄ 936"
-}, {
-  "station" : "HM",
-  "track" : "008"
-}, {
-  "station" : "UTI",
-  "track" : "006"
-}, {
-  "station" : "TJA",
-  "track" : "514"
-}, {
-  "station" : "YLY",
-  "track" : "731"
-}, {
-  "station" : "PAR",
-  "track" : "014"
-}, {
-  "station" : "KRA",
-  "track" : "006"
-}, {
-  "station" : "TE",
-  "track" : "005"
-}, {
-  "station" : "KJR",
-  "track" : "006"
-}, {
-  "station" : "KLV",
-  "track" : "008"
-}, {
-  "station" : "KR",
-  "track" : "142"
-}, {
-  "station" : "KV",
-  "track" : "221"
-}, {
-  "station" : "PKL",
-  "track" : "531"
-}, {
-  "station" : "KR",
-  "track" : "141"
-}, {
-  "station" : "OV",
-  "track" : "066"
-}, {
-  "station" : "VRA",
-  "track" : "008"
-}, {
-  "station" : "JR",
-  "track" : "006"
-}, {
-  "station" : "SMÄ",
-  "track" : "006"
-}, {
-  "station" : "VLP",
-  "track" : "066"
-}, {
-  "station" : "VJR",
-  "track" : "003"
-}, {
-  "station" : "HVS",
-  "track" : "009"
-}, {
-  "station" : "PAR",
-  "track" : "006"
-}, {
-  "station" : "KIS",
-  "track" : "003"
-}, {
-  "station" : "VSO",
-  "track" : "751"
-}, {
-  "station" : "YKSV",
-  "track" : "417"
-}, {
-  "station" : "RPO",
-  "track" : "213"
-}, {
-  "station" : "KEK",
-  "track" : "006"
-}, {
-  "station" : "KV",
-  "track" : "232"
-}, {
-  "station" : "NOA",
-  "track" : "NOA 051"
-}, {
-  "station" : "PAU",
-  "track" : "003"
-}, {
-  "station" : "KSK",
-  "track" : "441"
-}, {
-  "station" : "KU",
-  "track" : "003"
-}, {
-  "station" : "KVLA",
-  "track" : "221"
-}, {
-  "station" : "ENO",
-  "track" : "006"
-}, {
-  "station" : "RJÄ",
-  "track" : "006"
-}, {
-  "station" : "RHE",
-  "track" : "514"
-}, {
-  "station" : "KTI",
-  "track" : "006"
-}, {
-  "station" : "HPJ",
-  "track" : "004"
-}, {
   "station" : "TL",
-  "track" : "314"
-}, {
-  "station" : "AHO",
-  "track" : "008"
-}, {
-  "station" : "VK",
-  "track" : "006"
-}, {
-  "station" : "PMK",
-  "track" : "003"
-}, {
-  "station" : "ERV",
-  "track" : "001"
-}, {
-  "station" : "KV",
-  "track" : "005"
-}, {
-  "station" : "KVLA",
-  "track" : "232"
-}, {
-  "station" : "VNAT",
-  "track" : "213"
-}, {
-  "station" : "KV",
-  "track" : "006"
-}, {
-  "station" : "RI",
-  "track" : "RI 060"
-}, {
-  "station" : "ROI",
-  "track" : "008"
-}, {
-  "station" : "TPE",
-  "track" : "003"
-}, {
-  "station" : "KTH",
-  "track" : "006"
-}, {
-  "station" : "TNA",
-  "track" : "003"
-}, {
-  "station" : "TPE",
-  "track" : "009"
-}, {
-  "station" : "OIK",
-  "track" : "221"
-}, {
-  "station" : "TRL",
-  "track" : "001"
-}, {
-  "station" : "SK",
-  "track" : "431"
-}, {
-  "station" : "TL",
-  "track" : "321"
-}, {
-  "station" : "KAJ",
-  "track" : "557"
-}, {
-  "station" : "TUV",
-  "track" : "441"
-}, {
-  "station" : "KEM",
-  "track" : "008"
-}, {
-  "station" : "KYT",
-  "track" : "131"
-}, {
-  "station" : "LYÖ",
-  "track" : "003"
-}, {
-  "station" : "HPL",
-  "track" : "001"
-}, {
-  "station" : "HPL",
-  "track" : "123"
-}, {
-  "station" : "KÖK",
-  "track" : "008"
-}, {
-  "station" : "LUI",
-  "track" : "017"
-}, {
-  "station" : "ILA",
-  "track" : "001"
-}, {
-  "station" : "YLÖ",
-  "track" : "003"
-}, {
-  "station" : "LPÄ",
-  "track" : "003"
-}, {
-  "station" : "HNH",
-  "track" : "008"
-}, {
-  "station" : "SK",
-  "track" : "441"
-}, {
-  "station" : "STÖ",
-  "track" : "003"
-}, {
-  "station" : "KIT",
-  "track" : "006"
-}, {
-  "station" : "KPA",
-  "track" : "006"
-}, {
-  "station" : "KYT",
-  "track" : "003"
-}, {
-  "station" : "HR",
-  "track" : "006"
-}, {
-  "station" : "IN",
-  "track" : "066"
-}, {
-  "station" : "LAA",
-  "track" : "006"
-}, {
-  "station" : "TRK",
-  "track" : "009"
-}, {
-  "station" : "KYT",
-  "track" : "007"
-}, {
-  "station" : "SAM",
-  "track" : "003"
-}, {
-  "station" : "JSK",
-  "track" : "009"
-}, {
-  "station" : "VTI",
-  "track" : "008"
-}, {
-  "station" : "VS",
-  "track" : "431"
-}, {
-  "station" : "OIK",
-  "track" : "KV 455"
-}, {
-  "station" : "LAI",
-  "track" : "431"
-}, {
-  "station" : "TÖR",
-  "track" : "008"
-}, {
-  "station" : "LPA",
-  "track" : "008"
-}, {
-  "station" : "OIK",
-  "track" : "006"
-}, {
-  "station" : "RMI",
-  "track" : "014"
-}, {
-  "station" : "KGS",
-  "track" : "008"
-}, {
-  "station" : "SLD",
-  "track" : "131"
-}, {
-  "station" : "VUS",
-  "track" : "554"
-}, {
-  "station" : "RSU",
-  "track" : "017"
-}, {
-  "station" : "KUO",
-  "track" : "005"
-}, {
-  "station" : "RAS",
-  "track" : "006"
-}, {
-  "station" : "VAR",
-  "track" : "611"
-}, {
-  "station" : "KÄP",
-  "track" : "ILR 650"
-}, {
-  "station" : "LIS",
-  "track" : "006"
-}, {
-  "station" : "VNJ",
-  "track" : "731"
-}, {
-  "station" : "R660",
-  "track" : "131"
-}, {
-  "station" : "SPL",
-  "track" : "006"
-}, {
-  "station" : "SKÄ",
-  "track" : "024"
-}, {
-  "station" : "PKK",
-  "track" : "003"
-}, {
-  "station" : "TUS",
-  "track" : "001"
-}, {
-  "station" : "SGY",
-  "track" : "142"
-}, {
-  "station" : "LUO",
-  "track" : "441"
-}, {
-  "station" : "HPK",
-  "track" : "023"
-}, {
-  "station" : "KJÄ",
-  "track" : "527"
-}, {
-  "station" : "JVS",
-  "track" : "009"
-}, {
-  "station" : "LLA",
-  "track" : "521"
-}, {
-  "station" : "UR",
-  "track" : "321"
-}, {
-  "station" : "PLP",
-  "track" : "003"
-}, {
-  "station" : "TL",
-  "track" : "003"
+  "name" : "Toijala",
+  "track" : [ "321", "003" ]
 }, {
   "station" : "LEN",
-  "track" : "123"
+  "name" : "Lentoasema",
+  "track" : [ "123" ]
 }, {
   "station" : "YV",
-  "track" : "008"
-}, {
-  "station" : "SJ",
-  "track" : "003"
+  "name" : "Ylivieska",
+  "track" : [ "008" ]
 }, {
   "station" : "AVP",
-  "track" : "123"
-}, {
-  "station" : "VN",
-  "track" : "023"
-}, {
-  "station" : "PKO",
-  "track" : "351"
-}, {
-  "station" : "JAL",
-  "track" : "003"
-}, {
-  "station" : "VSL",
-  "track" : "006"
-}, {
-  "station" : "MY",
-  "track" : "066"
-}, {
-  "station" : "MIS",
-  "track" : "008"
-}, {
-  "station" : "PHÄ",
-  "track" : "087"
-}, {
-  "station" : "TOR",
-  "track" : "521"
-}, {
-  "station" : "JY",
-  "track" : "004"
-}, {
-  "station" : "JY",
-  "track" : "009"
-}, {
-  "station" : "MRI",
-  "track" : "321"
-}, {
-  "station" : "ALV",
-  "track" : "066"
-}, {
-  "station" : "LNÄ",
-  "track" : "123"
-}, {
-  "station" : "JUT",
-  "track" : "006"
-}, {
-  "station" : "MYS",
-  "track" : "008"
-}, {
-  "station" : "YLV",
-  "track" : "003"
-}, {
-  "station" : "SK",
-  "track" : "003"
-}, {
-  "station" : "LÄ",
-  "track" : "213"
-}, {
-  "station" : "RI",
-  "track" : "003"
-}, {
-  "station" : "RI",
-  "track" : "006"
-}, {
-  "station" : "SK",
-  "track" : "008"
-}, {
-  "station" : "TOI",
-  "track" : "005"
-}, {
-  "station" : "VRI",
-  "track" : "004"
-}, {
-  "station" : "SNJ",
-  "track" : "005"
-}, {
-  "station" : "KVT",
-  "track" : "221"
-}, {
-  "station" : "NII",
-  "track" : "066"
-}, {
-  "station" : "TOR",
-  "track" : "513"
-}, {
-  "station" : "RHA",
-  "track" : "008"
-}, {
-  "station" : "MYR",
-  "track" : "123"
-}, {
-  "station" : "PTG",
-  "track" : "527"
-}, {
-  "station" : "PTG",
-  "track" : "525"
-}, {
-  "station" : "KOK",
-  "track" : "417"
-}, {
-  "station" : "SNM",
-  "track" : "002"
-}, {
-  "station" : "PEL",
-  "track" : "521"
-}, {
-  "station" : "ARO",
-  "track" : "554"
-}, {
-  "station" : "PMT",
-  "track" : "005"
-}, {
-  "station" : "JY",
-  "track" : "023"
-}, {
-  "station" : "DMV",
-  "track" : "142"
-}, {
-  "station" : "SMJ",
-  "track" : "017"
-}, {
-  "station" : "HRV",
-  "track" : "003"
-}, {
-  "station" : "JNS",
-  "track" : "731"
-}, {
-  "station" : "TOL",
-  "track" : "001"
-}, {
-  "station" : "MUR",
-  "track" : "558"
-}, {
-  "station" : "KVU",
-  "track" : "008"
-}, {
-  "station" : "KRM",
-  "track" : "005"
-}, {
-  "station" : "HNN",
-  "track" : "007"
-}, {
-  "station" : "KON",
-  "track" : "531"
-}, {
-  "station" : "AHV",
-  "track" : "002"
-}, {
-  "station" : "MUR",
-  "track" : "553"
-}, {
-  "station" : "HPJ",
-  "track" : "087"
-}, {
-  "station" : "HKH",
-  "track" : "003"
-}, {
-  "station" : "KLI",
-  "track" : "521"
-}, {
-  "station" : "MH",
-  "track" : "531"
-}, {
-  "station" : "NTH",
-  "track" : "006"
-}, {
-  "station" : "KPI",
-  "track" : "008"
-}, {
-  "station" : "OL",
-  "track" : "531"
-}, {
-  "station" : "PIK",
-  "track" : "001"
-}, {
-  "station" : "PKO",
-  "track" : "003"
-}, {
-  "station" : "HAS",
-  "track" : "006"
-}, {
-  "station" : "PJM",
-  "track" : "001"
-}, {
-  "station" : "SL",
-  "track" : "014"
-}, {
-  "station" : "VMA",
-  "track" : "002"
-}, {
-  "station" : "UKÄ",
-  "track" : "006"
-}, {
-  "station" : "RKI",
-  "track" : "008"
-}, {
-  "station" : "TPET",
-  "track" : "003"
-}, {
-  "station" : "KAJ",
-  "track" : "005"
-}, {
-  "station" : "JNS",
-  "track" : "722"
-}, {
-  "station" : "KVT",
-  "track" : "006"
-}, {
-  "station" : "MYT",
-  "track" : "005"
-}, {
-  "station" : "TAP",
-  "track" : "006"
-}, {
-  "station" : "HNK",
-  "track" : "142"
-}, {
-  "station" : "HPK",
-  "track" : "066"
-}, {
-  "station" : "JTS",
-  "track" : "006"
-}, {
-  "station" : "NRL",
-  "track" : "751"
-}, {
-  "station" : "KTN",
-  "track" : "023"
-}, {
-  "station" : "LNA",
-  "track" : "005"
-}, {
-  "station" : "TJA",
-  "track" : "008"
-}, {
-  "station" : "MUL",
-  "track" : "008"
-}, {
-  "station" : "RKL",
-  "track" : "003"
-}, {
-  "station" : "DRA",
-  "track" : "142"
-}, {
-  "station" : "VT",
-  "track" : "008"
-}, {
-  "station" : "VLP",
-  "track" : "VLP 209"
-}, {
-  "station" : "LÄ",
-  "track" : "006"
-}, {
-  "station" : "HY",
-  "track" : "003"
-}, {
-  "station" : "KON",
-  "track" : "552"
-}, {
-  "station" : "VRM",
-  "track" : "251"
-}, {
-  "station" : "SKI",
-  "track" : "003"
-}, {
-  "station" : "VTR",
-  "track" : "003"
-}, {
-  "station" : "SAV",
-  "track" : "125"
-}, {
-  "station" : "SAV",
-  "track" : "003"
-}, {
-  "station" : "KON",
-  "track" : "554"
-}, {
-  "station" : "JÄS",
-  "track" : "363"
-}, {
-  "station" : "PL",
-  "track" : "213"
-}, {
-  "station" : "KAR",
-  "track" : "321"
-}, {
-  "station" : "KOI",
-  "track" : "008"
-}, {
-  "station" : "HAU",
-  "track" : "005"
-}, {
-  "station" : "ASO",
-  "track" : "123"
-}, {
-  "station" : "TOM",
-  "track" : "006"
-}, {
-  "station" : "KTÖ",
-  "track" : "123"
-}, {
-  "station" : "KUV",
-  "track" : "221"
-}, {
-  "station" : "KUT",
-  "track" : "001"
-}, {
-  "station" : "HKI",
-  "track" : "001"
-}, {
-  "station" : "HNO",
-  "track" : "002"
-}, {
-  "station" : "HPS",
-  "track" : "005"
-}, {
-  "station" : "SAU",
-  "track" : "003"
-}, {
-  "station" : "HKI",
-  "track" : "003"
-}, {
-  "station" : "HNKT",
-  "track" : "142"
-}, {
-  "station" : "ARL",
-  "track" : "005"
-}, {
-  "station" : "MÄK",
-  "track" : "001"
-}, {
-  "station" : "MD",
-  "track" : "003"
-}, {
-  "station" : "HVA",
-  "track" : "002"
-}, {
-  "station" : "KUOT",
-  "track" : "005"
-}, {
-  "station" : "HY",
-  "track" : "141"
-}, {
-  "station" : "KVY",
-  "track" : "003"
-}, {
-  "station" : "LVT",
-  "track" : "023"
-}, {
-  "station" : "TRV",
-  "track" : "008"
-}, {
-  "station" : "LOH",
-  "track" : "123"
-}, {
-  "station" : "MRK",
-  "track" : "005"
-}, {
-  "station" : "KNI",
-  "track" : "001"
-}, {
-  "station" : "PKU",
-  "track" : "001"
-}, {
-  "station" : "RM",
-  "track" : "141"
-}, {
-  "station" : "KOK",
-  "track" : "008"
-}, {
-  "station" : "SK",
-  "track" : "066"
-}, {
-  "station" : "LAK",
-  "track" : "003"
-}, {
-  "station" : "OI",
-  "track" : "006"
-}, {
-  "station" : "SOR",
-  "track" : "005"
-}, {
-  "station" : "JÄS",
-  "track" : "009"
-}, {
-  "station" : "KAN",
-  "track" : "123"
-}, {
-  "station" : "KA",
-  "track" : "006"
-}, {
-  "station" : "KÄP",
-  "track" : "003"
-}, {
-  "station" : "TJA",
-  "track" : "TJA 025"
-}, {
-  "station" : "PLU",
-  "track" : "003"
-}, {
-  "station" : "VKA",
-  "track" : "003"
-}, {
-  "station" : "KRN",
-  "track" : "141"
-}, {
-  "station" : "TUU",
-  "track" : "066"
-}, {
-  "station" : "JRS",
-  "track" : "001"
-}, {
-  "station" : "KPL",
-  "track" : "005"
-}, {
-  "station" : "PSL",
-  "track" : "ILR 650"
-}, {
-  "station" : "KUV",
-  "track" : "006"
-}, {
-  "station" : "LLH",
-  "track" : "LLH 717"
-}, {
-  "station" : "LLA",
-  "track" : "008"
-}, {
-  "station" : "NOA",
-  "track" : "002"
-}, {
-  "station" : "SR",
-  "track" : "006"
-}, {
-  "station" : "KEU",
-  "track" : "023"
-}, {
-  "station" : "KJÄ",
-  "track" : "008"
-}, {
-  "station" : "PNÄ",
-  "track" : "415"
-}, {
-  "station" : "ARP",
-  "track" : "003"
-}, {
-  "station" : "KE",
-  "track" : "KE 666"
+  "name" : "Aviapolis",
+  "track" : [ "123" ]
 }, {
   "station" : "SLO",
-  "track" : "001"
+  "name" : "Salo",
+  "track" : [ "001" ]
 }, {
-  "station" : "PMLA",
-  "track" : "005"
+  "station" : "VSL",
+  "name" : "Vuonislahti",
+  "track" : [ "006" ]
+}, {
+  "station" : "VEH",
+  "name" : "Vehkala",
+  "track" : [ "123" ]
+}, {
+  "station" : "OLK",
+  "name" : "Oulunkylä",
+  "track" : [ "003" ]
 }, {
   "station" : "PTO",
-  "track" : "531"
-}, {
-  "station" : "KRS",
-  "track" : "003"
-}, {
-  "station" : "SAU",
-  "track" : "SAU 744"
-}, {
-  "station" : "LÄP",
-  "track" : "009"
-}, {
-  "station" : "KIÄ",
-  "track" : "014"
-}, {
-  "station" : "ILM",
-  "track" : "005"
-}, {
-  "station" : "NSL",
-  "track" : "006"
-}, {
-  "station" : "KSU",
-  "track" : "007"
-}, {
-  "station" : "JSK",
-  "track" : "JSK Yht Y"
-}, {
-  "station" : "TU",
-  "track" : "003"
-}, {
-  "station" : "NMÄ",
-  "track" : "006"
-}, {
-  "station" : "PM",
-  "track" : "005"
-}, {
-  "station" : "MLA",
-  "track" : "006"
-}, {
-  "station" : "SLN",
-  "track" : "005"
-}, {
-  "station" : "KEM",
-  "track" : "KEM PAJ"
-}, {
-  "station" : "KRR",
-  "track" : "003"
-}, {
-  "station" : "LTS",
-  "track" : "003"
-}, {
-  "station" : "PVI",
-  "track" : "023"
-}, {
-  "station" : "HMK",
-  "track" : "066"
-}, {
-  "station" : "MRL",
-  "track" : "123"
-}, {
-  "station" : "MUR",
-  "track" : "005"
-}, {
-  "station" : "LKA",
-  "track" : "008"
-}, {
-  "station" : "MLÄ",
-  "track" : "007"
-}, {
-  "station" : "TV",
-  "track" : "009"
-}, {
-  "station" : "ÄHT",
-  "track" : "066"
-}, {
-  "station" : "PH",
-  "track" : "066"
-}, {
-  "station" : "OL",
-  "track" : "008"
-}, {
-  "station" : "RJP",
-  "track" : "008"
-}, {
-  "station" : "VLH",
-  "track" : "006"
-}, {
-  "station" : "MSO",
-  "track" : "141"
-}, {
-  "station" : "ÄS",
-  "track" : "002"
-}, {
-  "station" : "KJI",
-  "track" : "441"
-}, {
-  "station" : "KKI",
-  "track" : "342"
-}, {
-  "station" : "SIJ",
-  "track" : "SIJ 030"
-}, {
-  "station" : "HKO",
-  "track" : "014"
-}, {
-  "station" : "KOS",
-  "track" : "441"
-}, {
-  "station" : "TKL",
-  "track" : "003"
-}, {
-  "station" : "SIJ",
-  "track" : "017"
-}, {
-  "station" : "VNJ",
-  "track" : "024"
-}, {
-  "station" : "KRU",
-  "track" : "002"
-}, {
-  "station" : "JKI",
-  "track" : "017"
-}, {
-  "station" : "MUU",
-  "track" : "009"
-}, {
-  "station" : "LOL",
-  "track" : "005"
-}, {
-  "station" : "NVL",
-  "track" : "087"
-}, {
-  "station" : "PM",
-  "track" : "023"
-}, {
-  "station" : "PO",
-  "track" : "001"
-}, {
-  "station" : "MKA",
-  "track" : "006"
-}, {
-  "station" : "PM",
-  "track" : "024"
-}, {
-  "station" : "KHA",
-  "track" : "008"
-}, {
-  "station" : "KE",
-  "track" : "125"
-}, {
-  "station" : "KE",
-  "track" : "003"
-}, {
-  "station" : "MI",
-  "track" : "005"
-}, {
-  "station" : "TKK",
-  "track" : "006"
-}, {
-  "station" : "VIA",
-  "track" : "003"
-}, {
-  "station" : "PKU",
-  "track" : "PKU 011"
-}, {
-  "station" : "PRI",
-  "track" : "PRI Pur"
-}, {
-  "station" : "SIJ",
-  "track" : "005"
-}, {
-  "station" : "SKM",
-  "track" : "017"
-}, {
-  "station" : "KLH",
-  "track" : "001"
-}, {
-  "station" : "KON",
-  "track" : "005"
-}, {
-  "station" : "NRI",
-  "track" : "023"
-}, {
-  "station" : "KON",
-  "track" : "006"
-}, {
-  "station" : "OM",
-  "track" : "252"
-}, {
-  "station" : "KE",
-  "track" : "131"
-}, {
-  "station" : "HVA",
-  "track" : "HVA 367"
-}, {
-  "station" : "LH",
-  "track" : "006"
-}, {
-  "station" : "RJR",
-  "track" : "008"
-}, {
-  "station" : "NAL",
-  "track" : "002"
-}, {
-  "station" : "PRI",
-  "track" : "350"
-}, {
-  "station" : "IKO",
-  "track" : "001"
-}, {
-  "station" : "HKP",
-  "track" : "142"
-}, {
-  "station" : "HNV",
-  "track" : "024"
-}, {
-  "station" : "HLT",
-  "track" : "007"
-}, {
-  "station" : "VKH",
-  "track" : "001"
-}, {
-  "station" : "HLT",
-  "track" : "006"
-}, {
-  "station" : "SIM",
-  "track" : "008"
-}, {
-  "station" : "STA",
-  "track" : "142"
-}, {
-  "station" : "KKI",
-  "track" : "002"
-}, {
-  "station" : "LLH",
-  "track" : "002"
-}, {
-  "station" : "PSJ",
-  "track" : "003"
-}, {
-  "station" : "LLH",
-  "track" : "003"
-}, {
-  "station" : "LH",
-  "track" : "252"
-}, {
-  "station" : "KON",
-  "track" : "KON 101"
-}, {
-  "station" : "LH",
-  "track" : "253"
-}, {
-  "station" : "LM",
-  "track" : "321"
-}, {
-  "station" : "LH",
-  "track" : "251"
-}, {
-  "station" : "PNÄ",
-  "track" : "008"
-}, {
-  "station" : "RIO",
-  "track" : "008"
-}, {
-  "station" : "HY",
-  "track" : "HY 323"
-}, {
-  "station" : "SÄ",
-  "track" : "751"
-}, {
-  "station" : "IMR",
-  "track" : "006"
-}, {
-  "station" : "JOR",
-  "track" : "014"
-}, {
-  "station" : "KLR",
-  "track" : "521"
-}, {
-  "station" : "HKO",
-  "track" : "024"
-}, {
-  "station" : "HLS",
-  "track" : "005"
-}, {
-  "station" : "KML",
-  "track" : "008"
-}, {
-  "station" : "NRM",
-  "track" : "006"
-}, {
-  "station" : "LRS",
-  "track" : "006"
-}, {
-  "station" : "TUA",
-  "track" : "008"
-}, {
-  "station" : "KAU",
-  "track" : "002"
-}, {
-  "station" : "ML",
-  "track" : "003"
-}, {
-  "station" : "PKY",
-  "track" : "014"
-}, {
-  "station" : "VAR",
-  "track" : "024"
-}, {
-  "station" : "NÄR",
-  "track" : "441"
-}, {
-  "station" : "MN",
-  "track" : "349"
-}, {
-  "station" : "AJO",
-  "track" : "517"
-}, {
-  "station" : "PSL",
-  "track" : "001"
-}, {
-  "station" : "PHÄ",
-  "track" : "620"
-}, {
-  "station" : "TKP",
-  "track" : "008"
-}, {
-  "station" : "TKU",
-  "track" : "321"
-}, {
-  "station" : "KAS",
-  "track" : "KAS 164"
-}, {
-  "station" : "NM",
-  "track" : "141"
-}, {
-  "station" : "TMS",
-  "track" : "142"
-}, {
-  "station" : "LPR",
-  "track" : "009"
-}, {
-  "station" : "PSL",
-  "track" : "003"
-}, {
-  "station" : "SKT",
-  "track" : "003"
-}, {
-  "station" : "LK",
-  "track" : "003"
-}, {
-  "station" : "SVI",
-  "track" : "008"
-}, {
-  "station" : "LAU",
-  "track" : "004"
-}, {
-  "station" : "VAR",
-  "track" : "VAR 034"
-}, {
-  "station" : "ITA",
-  "track" : "003"
-}, {
-  "station" : "ILR",
-  "track" : "003"
-}, {
-  "station" : "TLV",
-  "track" : "558"
-}, {
-  "station" : "ILR",
-  "track" : "001"
-}, {
-  "station" : "IKR",
-  "track" : "221"
-}, {
-  "station" : "JNS",
-  "track" : "006"
-}, {
-  "station" : "IMT",
-  "track" : "006"
-}, {
-  "station" : "LPO",
-  "track" : "142"
-}, {
-  "station" : "LMK",
-  "track" : "003"
-}, {
-  "station" : "PRI",
-  "track" : "002"
-}, {
-  "station" : "MTV",
-  "track" : "008"
-}, {
-  "station" : "PUN",
-  "track" : "014"
-}, {
-  "station" : "UKP",
-  "track" : "332"
-}, {
-  "station" : "MN",
-  "track" : "002"
-}, {
-  "station" : "HD",
-  "track" : "008"
-}, {
-  "station" : "APT",
-  "track" : "005"
-}, {
-  "station" : "HIR",
-  "track" : "005"
+  "name" : "Paltamo",
+  "track" : [ "531" ]
 }, {
   "station" : "MKI",
-  "track" : "221"
+  "name" : "Myllykoski",
+  "track" : [ "221" ]
 }, {
-  "station" : "SAA",
-  "track" : "009"
+  "station" : "MY",
+  "name" : "Myllymäki",
+  "track" : [ "066" ]
+}, {
+  "station" : "KRS",
+  "name" : "Korso",
+  "track" : [ "003" ]
 }, {
   "station" : "KNS",
-  "track" : "008"
+  "name" : "Kannus",
+  "track" : [ "008" ]
 }, {
   "station" : "PUR",
-  "track" : "003"
+  "name" : "Purola",
+  "track" : [ "003" ]
 }, {
-  "station" : "LIS",
-  "track" : "713"
+  "station" : "AIN",
+  "name" : "Ainola",
+  "track" : [ "003" ]
+}, {
+  "station" : "MIS",
+  "name" : "Misi",
+  "track" : [ "008" ]
+}, {
+  "station" : "PHÄ",
+  "name" : "Pyhäsalmi",
+  "track" : [ "087" ]
+}, {
+  "station" : "KIÄ",
+  "name" : "Kerimäki",
+  "track" : [ "014" ]
 }, {
   "station" : "ILM",
-  "track" : "087"
-}, {
-  "station" : "NMP",
-  "track" : "521"
-}, {
-  "station" : "KHG",
-  "track" : "008"
+  "name" : "Iisalmi",
+  "track" : [ "005", "087" ]
 }, {
   "station" : "RY",
-  "track" : "003"
+  "name" : "Ryttylä",
+  "track" : [ "003" ]
 }, {
   "station" : "KEA",
-  "track" : "001"
+  "name" : "Kera",
+  "track" : [ "001" ]
 }, {
-  "station" : "KII",
-  "track" : "005"
+  "station" : "ALV",
+  "name" : "Alavus",
+  "track" : [ "066" ]
+}, {
+  "station" : "LNÄ",
+  "name" : "Leinelä",
+  "track" : [ "123" ]
+}, {
+  "station" : "NSL",
+  "name" : "Nastola",
+  "track" : [ "006" ]
 }, {
   "station" : "PRL",
-  "track" : "003"
+  "name" : "Parola",
+  "track" : [ "003" ]
 }, {
   "station" : "SKV",
-  "track" : "005"
+  "name" : "Sukeva",
+  "track" : [ "005" ]
 }, {
-  "station" : "MUR",
-  "track" : "MUR 562"
+  "station" : "TU",
+  "name" : "Turenki",
+  "track" : [ "003" ]
 }, {
-  "station" : "MAT",
-  "track" : "003"
+  "station" : "PM",
+  "name" : "Pieksämäki asema",
+  "track" : [ "023", "024", "005" ]
 }, {
-  "station" : "KVJ",
-  "track" : "531"
+  "station" : "MLA",
+  "name" : "Mommila",
+  "track" : [ "006" ]
 }, {
-  "station" : "TRÄ",
-  "track" : "006"
+  "station" : "RI",
+  "name" : "Riihimäki asema",
+  "track" : [ "003", "006" ]
 }, {
-  "station" : "SIP",
-  "track" : "007"
-}, {
-  "station" : "TMU",
-  "track" : "005"
+  "station" : "KRA",
+  "name" : "Koria",
+  "track" : [ "006" ]
 }, {
   "station" : "VMO",
-  "track" : "001"
+  "name" : "Valimo",
+  "track" : [ "001" ]
 }, {
   "station" : "HKS",
-  "track" : "023"
+  "name" : "Hankasalmi",
+  "track" : [ "023" ]
 }, {
-  "station" : "VKI",
-  "track" : "023"
+  "station" : "SNJ",
+  "name" : "Suonenjoki",
+  "track" : [ "005" ]
 }, {
-  "station" : "SLD",
-  "track" : "SLD 300"
-}, {
-  "station" : "TKU",
-  "track" : "332"
+  "station" : "PVI",
+  "name" : "Petäjävesi",
+  "track" : [ "023" ]
 }, {
   "station" : "HAA",
-  "track" : "007"
+  "name" : "Haarajoki",
+  "track" : [ "007" ]
 }, {
-  "station" : "KN",
-  "track" : "343"
-}, {
-  "station" : "OT",
-  "track" : "005"
-}, {
-  "station" : "KN",
-  "track" : "342"
-}, {
-  "station" : "KAS",
-  "track" : "066"
-}, {
-  "station" : "RPA",
-  "track" : "008"
-}, {
-  "station" : "LAV",
-  "track" : "123"
-}, {
-  "station" : "MAS",
-  "track" : "001"
-}, {
-  "station" : "HVK",
-  "track" : "123"
-}, {
-  "station" : "HVK",
-  "track" : "003"
-}, {
-  "station" : "ONT",
-  "track" : "731"
-}, {
-  "station" : "LPV",
-  "track" : "001"
-}, {
-  "station" : "RAI",
-  "track" : "333"
-}, {
-  "station" : "UTJ",
-  "track" : "531"
-}, {
-  "station" : "LKL",
-  "track" : "005"
-}, {
-  "station" : "UIM",
-  "track" : "006"
-}, {
-  "station" : "VAA",
-  "track" : "531"
-}, {
-  "station" : "VIH",
-  "track" : "024"
-}, {
-  "station" : "KPY",
-  "track" : "008"
-}, {
-  "station" : "TKU",
-  "track" : "001"
-}, {
-  "station" : "VJO",
-  "track" : "342"
-}, {
-  "station" : "VMS",
-  "track" : "123"
-}, {
-  "station" : "KHI",
-  "track" : "006"
-}, {
-  "station" : "TKL",
-  "track" : "TKL HAK"
+  "station" : "JR",
+  "name" : "Järvelä",
+  "track" : [ "006" ]
 }, {
   "station" : "VLP",
-  "track" : "373"
+  "name" : "Vilppula",
+  "track" : [ "066" ]
 }, {
-  "station" : "POH",
-  "track" : "123"
+  "station" : "MYR",
+  "name" : "Myyrmäki",
+  "track" : [ "123" ]
 }, {
-  "station" : "STI",
-  "track" : "001"
+  "station" : "MRL",
+  "name" : "Martinlaakso",
+  "track" : [ "123" ]
 }, {
-  "station" : "RSU",
-  "track" : "618"
+  "station" : "PAR",
+  "name" : "Parikkala",
+  "track" : [ "014", "006" ]
 }, {
-  "station" : "JK",
-  "track" : "003"
+  "station" : "MLÄ",
+  "name" : "Mäntsälä",
+  "track" : [ "007" ]
 }, {
-  "station" : "OU",
-  "track" : "008"
+  "station" : "ÄHT",
+  "name" : "Ähtäri",
+  "track" : [ "066" ]
 }, {
-  "station" : "HVN",
-  "track" : "008"
+  "station" : "MAS",
+  "name" : "Masala",
+  "track" : [ "001" ]
 }, {
-  "station" : "II",
-  "track" : "008"
+  "station" : "PH",
+  "name" : "Pihlajavesi",
+  "track" : [ "066" ]
 }, {
-  "station" : "IKY",
-  "track" : "431"
+  "station" : "LPV",
+  "name" : "Leppävaara",
+  "track" : [ "001" ]
 }, {
-  "station" : "ELA",
-  "track" : "008"
+  "station" : "PEL",
+  "name" : "Pello",
+  "track" : [ "521" ]
 }, {
-  "station" : "HEK",
-  "track" : "001"
+  "station" : "VLH",
+  "name" : "Villähde",
+  "track" : [ "006" ]
 }, {
-  "station" : "PUS",
-  "track" : "006"
+  "station" : "UTJ",
+  "name" : "Utajärvi",
+  "track" : [ "531" ]
 }, {
-  "station" : "KUA",
-  "track" : "008"
+  "station" : "JY",
+  "name" : "Jyväskylä",
+  "track" : [ "023", "004", "009" ]
 }, {
-  "station" : "KÖ",
-  "track" : "321"
+  "station" : "UIM",
+  "name" : "Uimaharju",
+  "track" : [ "006" ]
 }, {
-  "station" : "KKN",
-  "track" : "001"
+  "station" : "VAA",
+  "name" : "Vaala",
+  "track" : [ "531" ]
 }, {
-  "station" : "SPÄ",
-  "track" : "005"
+  "station" : "TKL",
+  "name" : "Tikkurila asema",
+  "track" : [ "003" ]
 }, {
-  "station" : "PLA",
-  "track" : "003"
-}, {
-  "station" : "MR",
-  "track" : "005"
-}, {
-  "station" : "RAI",
-  "track" : "332"
-}, {
-  "station" : "OV",
-  "track" : "009"
-}, {
-  "station" : "PSLT",
-  "track" : "003"
-}, {
-  "station" : "RAH",
-  "track" : "006"
-}, {
-  "station" : "KAU",
-  "track" : "KAU 120"
-}, {
-  "station" : "VHJ",
-  "track" : "005"
-}, {
-  "station" : "KHK",
-  "track" : "001"
-}, {
-  "station" : "SOA",
-  "track" : "005"
-}, {
-  "station" : "LO",
-  "track" : "141"
-}, {
-  "station" : "VKO",
-  "track" : "023"
+  "station" : "VIH",
+  "name" : "Vihtari",
+  "track" : [ "024" ]
 }, {
   "station" : "SIJ",
-  "track" : "SIJ 662"
+  "name" : "Siilinjärvi Asema",
+  "track" : [ "005" ]
 }, {
-  "station" : "HÖL",
-  "track" : "006"
+  "station" : "KRU",
+  "name" : "Karkku",
+  "track" : [ "002" ]
 }, {
-  "station" : "SKT",
-  "track" : "066"
+  "station" : "TOL",
+  "name" : "Tolsa",
+  "track" : [ "001" ]
 }, {
-  "station" : "TOI",
-  "track" : "616"
+  "station" : "PAU",
+  "name" : "Pasila autojuna-asema",
+  "track" : [ "003" ]
 }, {
-  "station" : "PTO",
-  "track" : "PTO 021"
+  "station" : "TKU",
+  "name" : "Turku asema",
+  "track" : [ "001", "321" ]
 }, {
-  "station" : "KRV",
-  "track" : "087"
+  "station" : "HNN",
+  "name" : "Henna",
+  "track" : [ "007" ]
 }, {
-  "station" : "SPJ",
-  "track" : "521"
+  "station" : "ENO",
+  "name" : "Eno",
+  "track" : [ "006" ]
+}, {
+  "station" : "HPJ",
+  "name" : "Haapajärvi",
+  "track" : [ "004", "087" ]
+}, {
+  "station" : "POH",
+  "name" : "Pohjois-Haaga",
+  "track" : [ "123" ]
+}, {
+  "station" : "HKH",
+  "name" : "Hiekkaharju",
+  "track" : [ "003" ]
+}, {
+  "station" : "KLI",
+  "name" : "Kolari",
+  "track" : [ "521" ]
+}, {
+  "station" : "STI",
+  "name" : "Siuntio",
+  "track" : [ "001" ]
+}, {
+  "station" : "NVL",
+  "name" : "Nivala",
+  "track" : [ "087" ]
+}, {
+  "station" : "JK",
+  "name" : "Jokela",
+  "track" : [ "003" ]
+}, {
+  "station" : "KTI",
+  "name" : "Kesälahti",
+  "track" : [ "006" ]
+}, {
+  "station" : "OU",
+  "name" : "Oulainen",
+  "track" : [ "008" ]
+}, {
+  "station" : "MH",
+  "name" : "Muhos",
+  "track" : [ "531" ]
+}, {
+  "station" : "KHA",
+  "name" : "Kauhava",
+  "track" : [ "008" ]
+}, {
+  "station" : "OL",
+  "name" : "Oulu asema",
+  "track" : [ "531", "008" ]
+}, {
+  "station" : "PKO",
+  "name" : "Parkano",
+  "track" : [ "003" ]
+}, {
+  "station" : "IKY",
+  "name" : "Isokyrö",
+  "track" : [ "431" ]
+}, {
+  "station" : "MI",
+  "name" : "Mikkeli",
+  "track" : [ "005" ]
+}, {
+  "station" : "PJM",
+  "name" : "Pitäjänmäki",
+  "track" : [ "001" ]
+}, {
+  "station" : "SL",
+  "name" : "Savonlinna asema",
+  "track" : [ "014" ]
+}, {
+  "station" : "VIA",
+  "name" : "Viiala",
+  "track" : [ "003" ]
+}, {
+  "station" : "VMA",
+  "name" : "Vammala",
+  "track" : [ "002" ]
+}, {
+  "station" : "UKÄ",
+  "name" : "Uusikylä",
+  "track" : [ "006" ]
+}, {
+  "station" : "RKI",
+  "name" : "Ruukki",
+  "track" : [ "008" ]
+}, {
+  "station" : "PMK",
+  "name" : "Pukinmäki",
+  "track" : [ "003" ]
+}, {
+  "station" : "KAJ",
+  "name" : "Kajaani",
+  "track" : [ "005" ]
+}, {
+  "station" : "KKN",
+  "name" : "Kirkkonummi",
+  "track" : [ "001" ]
+}, {
+  "station" : "HNK",
+  "name" : "Hanko asema",
+  "track" : [ "142" ]
+}, {
+  "station" : "KV",
+  "name" : "Kouvola asema",
+  "track" : [ "221", "005", "006" ]
+}, {
+  "station" : "PLA",
+  "name" : "Puistola",
+  "track" : [ "003" ]
+}, {
+  "station" : "ROI",
+  "name" : "Rovaniemi",
+  "track" : [ "008" ]
+}, {
+  "station" : "KLH",
+  "name" : "Kauklahti asema",
+  "track" : [ "001" ]
+}, {
+  "station" : "KON",
+  "name" : "Kontiomäki",
+  "track" : [ "531", "005", "006" ]
+}, {
+  "station" : "MR",
+  "name" : "Mäntyharju",
+  "track" : [ "005" ]
+}, {
+  "station" : "JTS",
+  "name" : "Joutseno",
+  "track" : [ "006" ]
+}, {
+  "station" : "LNA",
+  "name" : "Lapinlahti",
+  "track" : [ "005" ]
+}, {
+  "station" : "TPE",
+  "name" : "Tampere asema",
+  "track" : [ "003", "009" ]
+}, {
+  "station" : "OV",
+  "name" : "Orivesi",
+  "track" : [ "066", "009" ]
+}, {
+  "station" : "TNA",
+  "name" : "Tapanila",
+  "track" : [ "003" ]
+}, {
+  "station" : "KE",
+  "name" : "Kerava asema",
+  "track" : [ "003", "125" ]
+}, {
+  "station" : "MUL",
+  "name" : "Muurola",
+  "track" : [ "008" ]
+}, {
+  "station" : "LH",
+  "name" : "Lahti",
+  "track" : [ "006" ]
+}, {
+  "station" : "RKL",
+  "name" : "Rekola",
+  "track" : [ "003" ]
+}, {
+  "station" : "TRL",
+  "name" : "Tuomarila",
+  "track" : [ "001" ]
+}, {
+  "station" : "DRA",
+  "name" : "Dragsvik",
+  "track" : [ "142" ]
+}, {
+  "station" : "IKO",
+  "name" : "Inkoo",
+  "track" : [ "001" ]
+}, {
+  "station" : "HKP",
+  "name" : "Hanko-Pohjoinen",
+  "track" : [ "142" ]
+}, {
+  "station" : "HNV",
+  "name" : "Heinävesi",
+  "track" : [ "024" ]
 }, {
   "station" : "KEM",
-  "track" : "517"
+  "name" : "Kemi",
+  "track" : [ "008" ]
+}, {
+  "station" : "STA",
+  "name" : "Santala",
+  "track" : [ "142" ]
+}, {
+  "station" : "KKI",
+  "name" : "Kokemäki",
+  "track" : [ "002" ]
+}, {
+  "station" : "SAV",
+  "name" : "Savio",
+  "track" : [ "003", "125" ]
+}, {
+  "station" : "HPL",
+  "name" : "Huopalahti",
+  "track" : [ "001", "123" ]
+}, {
+  "station" : "ILA",
+  "name" : "Ilmala asema",
+  "track" : [ "001" ]
+}, {
+  "station" : "LM",
+  "name" : "Loimaa",
+  "track" : [ "321" ]
+}, {
+  "station" : "HÖL",
+  "name" : "Höljäkkä",
+  "track" : [ "006" ]
+}, {
+  "station" : "LPÄ",
+  "name" : "Lempäälä",
+  "track" : [ "003" ]
+}, {
+  "station" : "PNÄ",
+  "name" : "Pännäinen",
+  "track" : [ "008" ]
+}, {
+  "station" : "HAU",
+  "name" : "Haukivuori",
+  "track" : [ "005" ]
+}, {
+  "station" : "KIT",
+  "name" : "Kitee",
+  "track" : [ "006" ]
+}, {
+  "station" : "KRV",
+  "name" : "Kiuruvesi",
+  "track" : [ "087" ]
+}, {
+  "station" : "KTÖ",
+  "name" : "Kivistö",
+  "track" : [ "123" ]
+}, {
+  "station" : "KUT",
+  "name" : "Kupittaa",
+  "track" : [ "001" ]
+}, {
+  "station" : "IMR",
+  "name" : "Imatra asema",
+  "track" : [ "006" ]
 }, {
   "station" : "KIL",
-  "track" : "001"
+  "name" : "Kilo",
+  "track" : [ "001" ]
 }, {
-  "station" : "TA",
-  "track" : "006"
+  "station" : "HKI",
+  "name" : "Helsinki asema",
+  "track" : [ "001", "003" ]
 }, {
-  "station" : "SLD",
-  "track" : "SLD 100"
+  "station" : "NRM",
+  "name" : "Nurmes",
+  "track" : [ "006" ]
 }, {
-  "station" : "RMA",
-  "track" : "342"
+  "station" : "HR",
+  "name" : "Herrala",
+  "track" : [ "006" ]
+}, {
+  "station" : "SAU",
+  "name" : "Saunakallio",
+  "track" : [ "003" ]
+}, {
+  "station" : "LAA",
+  "name" : "Lappila",
+  "track" : [ "006" ]
 }, {
   "station" : "LR",
-  "track" : "006"
+  "name" : "Lappeenranta",
+  "track" : [ "006" ]
 }, {
-  "station" : "HJ",
-  "track" : "005"
+  "station" : "ML",
+  "name" : "Malmi",
+  "track" : [ "003" ]
 }, {
-  "station" : "SIU",
-  "track" : "002"
+  "station" : "PKY",
+  "name" : "Pääskylahti",
+  "track" : [ "014" ]
 }, {
-  "station" : "OLLI",
-  "track" : "131"
+  "station" : "VAR",
+  "name" : "Varkaus",
+  "track" : [ "024" ]
 }, {
-  "station" : "ÄKI",
-  "track" : "004"
+  "station" : "VTI",
+  "name" : "Vihanti",
+  "track" : [ "008" ]
 }, {
-  "station" : "SUO",
-  "track" : "004"
+  "station" : "VS",
+  "name" : "Vaasa",
+  "track" : [ "431" ]
 }, {
-  "station" : "SMJ",
-  "track" : "731"
+  "station" : "LAI",
+  "name" : "Laihia",
+  "track" : [ "431" ]
+}, {
+  "station" : "MÄK",
+  "name" : "Mäkkylä",
+  "track" : [ "001" ]
+}, {
+  "station" : "HVA",
+  "name" : "Harjavalta",
+  "track" : [ "002" ]
+}, {
+  "station" : "HY",
+  "name" : "Hyvinkää",
+  "track" : [ "003", "141" ]
+}, {
+  "station" : "LPA",
+  "name" : "Lapua",
+  "track" : [ "008" ]
+}, {
+  "station" : "KVY",
+  "name" : "Koivukylä",
+  "track" : [ "003" ]
+}, {
+  "station" : "LVT",
+  "name" : "Lievestuore",
+  "track" : [ "023" ]
 }, {
   "station" : "KLO",
-  "track" : "066"
+  "name" : "Kolho",
+  "track" : [ "066" ]
 }, {
   "station" : "MLO",
-  "track" : "123"
+  "name" : "Malminkartano",
+  "track" : [ "123" ]
 }, {
-  "station" : "SÄ",
-  "track" : "006"
+  "station" : "TRV",
+  "name" : "Tervola",
+  "track" : [ "008" ]
 }, {
-  "station" : "MYT",
-  "track" : "610"
+  "station" : "LOH",
+  "name" : "Louhela",
+  "track" : [ "123" ]
 }, {
   "station" : "VKS",
-  "track" : "123"
+  "name" : "Vantaankoski",
+  "track" : [ "123" ]
 }, {
-  "station" : "YPY",
-  "track" : "554"
+  "station" : "KUO",
+  "name" : "Kuopio asema",
+  "track" : [ "005" ]
+}, {
+  "station" : "TMS",
+  "name" : "Tammisaari",
+  "track" : [ "142" ]
 }, {
   "station" : "EPO",
-  "track" : "001"
+  "name" : "Espoo",
+  "track" : [ "001" ]
 }, {
-  "station" : "RLÄ",
-  "track" : "003"
+  "station" : "KNI",
+  "name" : "Kauniainen",
+  "track" : [ "001" ]
+}, {
+  "station" : "PSL",
+  "name" : "Pasila asema",
+  "track" : [ "001", "003" ]
 }, {
   "station" : "HK",
-  "track" : "006"
+  "name" : "Hikiä",
+  "track" : [ "006" ]
 }, {
-  "station" : "HSL",
-  "track" : "006"
+  "station" : "KOK",
+  "name" : "Kokkola",
+  "track" : [ "008" ]
 }, {
-  "station" : "TOH",
-  "track" : "751"
+  "station" : "SK",
+  "name" : "Seinäjoki asema",
+  "track" : [ "066", "431", "003", "008" ]
 }, {
-  "station" : "KSA",
-  "track" : "005"
+  "station" : "OI",
+  "name" : "Oitti",
+  "track" : [ "006" ]
 }, {
-  "station" : "MJJ",
-  "track" : "003"
+  "station" : "JÄS",
+  "name" : "Jämsä",
+  "track" : [ "009" ]
 }, {
-  "station" : "RSM",
-  "track" : "123"
+  "station" : "KAN",
+  "name" : "Kannelmäki",
+  "track" : [ "123" ]
+}, {
+  "station" : "LIS",
+  "name" : "Lieksa",
+  "track" : [ "006" ]
+}, {
+  "station" : "VNJ",
+  "name" : "Viinijärvi",
+  "track" : [ "024", "731" ]
+}, {
+  "station" : "KA",
+  "name" : "Kausala",
+  "track" : [ "006" ]
+}, {
+  "station" : "KÄP",
+  "name" : "Käpylä",
+  "track" : [ "003" ]
+}, {
+  "station" : "ITA",
+  "name" : "Iittala",
+  "track" : [ "003" ]
+}, {
+  "station" : "SPL",
+  "name" : "Simpele",
+  "track" : [ "006" ]
+}, {
+  "station" : "IKR",
+  "name" : "Inkeroinen",
+  "track" : [ "221" ]
+}, {
+  "station" : "TUU",
+  "name" : "Tuuri",
+  "track" : [ "066" ]
+}, {
+  "station" : "JNS",
+  "name" : "Joensuu asema",
+  "track" : [ "731", "006" ]
+}, {
+  "station" : "TUS",
+  "name" : "Turku satama",
+  "track" : [ "001" ]
+}, {
+  "station" : "JRS",
+  "name" : "Jorvas",
+  "track" : [ "001" ]
+}, {
+  "station" : "LPO",
+  "name" : "Lappohja",
+  "track" : [ "142" ]
 }, {
   "station" : "HP",
-  "track" : "321"
+  "name" : "Humppila",
+  "track" : [ "321" ]
 }, {
   "station" : "KR",
-  "track" : "001"
+  "name" : "Karjaa",
+  "track" : [ "001", "141", "142" ]
 }, {
-  "station" : "SLD",
-  "track" : "SLD 200"
+  "station" : "PRI",
+  "name" : "Pori",
+  "track" : [ "002" ]
 }, {
   "station" : "JP",
-  "track" : "003"
+  "name" : "Järvenpää asema",
+  "track" : [ "003" ]
 }, {
-  "station" : "VIN",
-  "track" : "003"
+  "station" : "SGY",
+  "name" : "Skogby",
+  "track" : [ "142" ]
 }, {
   "station" : "HL",
-  "track" : "003"
+  "name" : "Hämeenlinna",
+  "track" : [ "003" ]
 }, {
-  "station" : "HNA",
-  "track" : "003"
+  "station" : "HPK",
+  "name" : "Haapamäki",
+  "track" : [ "066", "023" ]
 }, {
-  "station" : "VSA",
-  "track" : "125"
+  "station" : "PUN",
+  "name" : "Punkaharju",
+  "track" : [ "014" ]
+}, {
+  "station" : "NOA",
+  "name" : "Nokia",
+  "track" : [ "002" ]
+}, {
+  "station" : "KEU",
+  "name" : "Keuruu",
+  "track" : [ "023" ]
+}, {
+  "station" : "KJÄ",
+  "name" : "Kemijärvi",
+  "track" : [ "008" ]
 }, {
   "station" : "KVH",
-  "track" : "001"
+  "name" : "Koivuhovi",
+  "track" : [ "001" ]
 } ]
