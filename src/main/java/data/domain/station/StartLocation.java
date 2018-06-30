@@ -1,4 +1,4 @@
-package data.domain;
+package data.domain.station;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

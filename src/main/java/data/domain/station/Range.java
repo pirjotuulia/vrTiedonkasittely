@@ -1,6 +1,6 @@
-package data.domain;
+package data.domain.station;
 
-import data.domain.EndLocation;
+import data.domain.station.EndLocation;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**

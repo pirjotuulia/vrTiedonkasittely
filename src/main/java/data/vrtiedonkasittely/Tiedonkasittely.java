@@ -1,9 +1,8 @@
 package data.vrtiedonkasittely;
 
-import data.domain.Risteysasema;
-import data.domain.Station;
-import data.domain.Raideosuus;
-import data.domain.Asema;
+import data.domain.station.Station;
+import data.domain.station.Raideosuus;
+import data.domain.station.Asema;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.type.CollectionType;
@@ -20,6 +19,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -29,9 +29,9 @@ public class Tiedonkasittely {
 
     private List<Raideosuus> raideosuudet;
     private List<Station> stations;
-    private Set<Asema> asemat = new HashSet<>();
-    private Map<String, TreeSet<String>> risteysasemat = new HashMap<>();
-    private List<Risteysasema> risteyspaikat = new ArrayList<>();
+    private Set<Asema> asemat;
+    private List<Asema> risteysasemat = new ArrayList<>();
+    private Map<String, String> asematLyhenteineen;
 
     public void lueRaideosuuksienJSONData() {
         String baseurl = "https://rata.digitraffic.fi/api/v1";
@@ -58,59 +58,65 @@ public class Tiedonkasittely {
     }
 
     public void irrotaRatatiedot() {
+        asemat = new HashSet<>();
         for (Raideosuus r : raideosuudet) {
             String tunnus = r.getStation();
-            String rata = r.getRanges().get(0).getStartLocation().getTrack();
-            while (rata.length() < 3) {
-                rata = "0" + rata;
+            if (tarkistetaanRelevanssi(tunnus)) {
+                String rata = r.getRanges().get(0).getStartLocation().getTrack();
+                while (rata.length() < 3) {
+                    rata = "0" + rata;
+                }
+                if (!asemat.stream().anyMatch(a -> a.getStation().equals(tunnus))) {
+                    Asema asema = new Asema(tunnus);
+                    asema.addTrack(rata);
+                    asemat.add(asema);
+                } else {
+                    for (Asema a : asemat) {
+                        if (a.getStation().equals(tunnus)) {
+                            a.addTrack(rata);
+                        }
+                    }
+                }
             }
-            Asema asema = new Asema(tunnus, rata);
-            asemat.add(asema);
         }
     }
 
     public void selvitäRisteysasemat() {
-        for (Asema as : asemat) {
-            risteysasemat.putIfAbsent(as.getStation(), new TreeSet());
-            risteysasemat.get(as.getStation()).add(as.getTrack());
-        }
-        System.out.println("Risteysasemat ennen poistoa " + risteysasemat.size());
-        Iterator it = risteysasemat.keySet().iterator();
-        while (it.hasNext()) {
-            String key = (String) it.next();
-            if (risteysasemat.get(key).size() == 1) {
-                it.remove();
+        System.out.println("Matkustaja-asemat yhteensä " + asemat.size());
+        this.risteysasemat = asemat.stream().filter(a -> a.getTrack().size() > 1).collect(Collectors.toList());
+        System.out.println("Risteysasemat poiston jälkeen " + risteysasemat.size());
+        Set<String> poistettavat = new HashSet<>();
+        poistettavat.add("ILR 650");//Ilmalan ratapihan, Käpylän ja Pasilan yhdistävä rata. Tätä ei voi suodattaa millään järkevällä muulla konstilla.
+        for (String rata : radatSettiin()) {
+            List<String> paikat = etsiRadanVarrellaOlevatAsemat(rata);
+            if (paikat.size() < 2) {
+                poistettavat.add(rata);
             }
         }
+        System.out.println("Poistettavia ratoja " + poistettavat.size());
+        poistettavat.stream().forEach(p -> {
+            this.risteysasemat.stream().forEach(r -> {
+                if (r.getTrack().contains(p)) {
+                    r.removeTrack(p);
+                }
+            });
+        });
+        this.risteysasemat = this.risteysasemat.stream().filter(a -> a.getTrack().size() > 1).collect(Collectors.toList());
         System.out.println("Risteysasemat poiston jälkeen " + risteysasemat.size());
     }
 
     public void lisaaAsemienNimet() {
-        for (Station station : stations) {
-            String tunnus = station.getStationShortCode();
-            if (station.isPassengerTraffic() && risteysasemat.containsKey(tunnus)) {
-                String nimi = station.getStationName();
-                Risteysasema rist = new Risteysasema(tunnus, nimi, risteysasemat.get(tunnus));
-                risteyspaikat.add(rist);
-            }
+        for (Asema a : asemat) {
+            String tunnus = a.getStation();
+            a.setName(asematLyhenteineen.get(tunnus));
         }
-    }
-
-    public Map<String, String> matkustajaAsematLyhenteineen() {
-        Map<String, String> asematLyhenteineen = new HashMap<>();
-        for (Station station : stations) {
-            if (station.isPassengerTraffic()) {
-                asematLyhenteineen.put(station.getStationName(), station.getStationShortCode());
-            }
-        }
-        return asematLyhenteineen;
     }
 
     public void risteysAsematJsoniksi() {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
         try {
-            objectMapper.writeValue(new File("risteysasemat.json"), risteyspaikat);
+            objectMapper.writeValue(new File("risteysasemat.json"), risteysasemat);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -128,8 +134,8 @@ public class Tiedonkasittely {
 
     public Set<String> risteysasemienRadatSettiin() {
         Set<String> kaikkiRadat = new TreeSet();
-        for (Risteysasema a : risteyspaikat) {
-            for (String rata : a.getRadat()) {
+        for (Asema a : risteysasemat) {
+            for (String rata : a.getTrack()) {
                 kaikkiRadat.add(rata);
             }
         }
@@ -139,8 +145,38 @@ public class Tiedonkasittely {
     public Set<String> radatSettiin() {
         Set<String> kaikkiRadat = new TreeSet();
         for (Asema a : asemat) {
-            kaikkiRadat.add(a.getTrack());
+            kaikkiRadat.addAll(a.getTrack());
         }
         return kaikkiRadat;
+    }
+
+    private boolean tarkistetaanRelevanssi(String tunnus) {
+        for (Station st : this.stations) {
+            if (st.getStationShortCode().equals(tunnus)) {
+                if (st.isPassengerTraffic() && st.getType().equals("STATION") || st.getType().equals("STOPPING_POINT")) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public void matkustajaAsematLyhenteineen() {
+        asematLyhenteineen = new HashMap<>();
+        for (Station station : stations) {
+            if (station.isPassengerTraffic()) {
+                this.asematLyhenteineen.put(station.getStationShortCode(), station.getStationName());
+            }
+        }
+    }
+
+    public List<String> etsiRadanVarrellaOlevatAsemat(String string) {
+        List<String> radanAsemat = new ArrayList<>();
+        for (Asema a : asemat) {
+            if (a.getTrack().contains(string)) {
+                radanAsemat.add(a.getName());
+            }
+        }
+        return radanAsemat;
     }
 }

@@ -5,11 +5,10 @@
  */
 package data;
 
-import data.domain.Asema;
-import data.domain.Risteysasema;
+import data.domain.station.Asema;
 import data.vrtiedonkasittely.Tiedonkasittely;
 import java.io.IOException;
-import java.util.Map;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -22,17 +21,22 @@ public class Main {
         Tiedonkasittely tk = new Tiedonkasittely();
         tk.lueRaideosuuksienJSONData();
         tk.lueAsemienJSONData();
-        tk.risteysAsematJsoniksi();
+        tk.matkustajaAsematLyhenteineen();
         tk.irrotaRatatiedot();
-        tk.selvitäRisteysasemat();
         tk.lisaaAsemienNimet();
-        tk.risteysAsematJsoniksi();
+        tk.selvitäRisteysasemat();
         tk.asematJsoniksi();
+        tk.risteysAsematJsoniksi();
+
         Set<String> risteysasemienRadat = tk.risteysasemienRadatSettiin();
         Set<String> kaikkiRadat = tk.radatSettiin();
-        Map<String, String> asematLyhenteineen = tk.matkustajaAsematLyhenteineen();
         System.out.println("Risteysradat" + risteysasemienRadat.toString());
         System.out.println("Kaikki radat" + kaikkiRadat.toString());
-        System.out.println(asematLyhenteineen.toString());
+        for (String rata : tk.radatSettiin()) {
+            List<String> paikat = tk.etsiRadanVarrellaOlevatAsemat(rata);
+            if (paikat.size() > 0) {
+                System.out.println("Rata " + rata + ": " + paikat);
+            }
+        }
     }
 }
