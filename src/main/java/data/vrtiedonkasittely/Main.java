@@ -5,10 +5,15 @@
  */
 package data;
 
+import data.domain.connection.ConnectionSeeker;
 import data.domain.station.Asema;
+import data.domain.train.JunaJson;
+import data.domain.train.Train;
+import data.vrtiedonkasittely.Haku;
 import data.vrtiedonkasittely.Tiedonkasittely;
 import java.io.IOException;
 import java.util.List;
+import java.util.Scanner;
 import java.util.Set;
 
 /**
@@ -17,26 +22,32 @@ import java.util.Set;
  */
 public class Main {
 
-    public static void main(String[] args) throws IOException {
-        Tiedonkasittely tk = new Tiedonkasittely();
-        tk.lueRaideosuuksienJSONData();
-        tk.lueAsemienJSONData();
-        tk.matkustajaAsematLyhenteineen();
-        tk.irrotaRatatiedot();
-        tk.lisaaAsemienNimet();
-        tk.selvitäRisteysasemat();
-        tk.asematJsoniksi();
-        tk.risteysAsematJsoniksi();
+    private static Tiedonkasittely tk;
+    private static JunaJson jj;
+    private static ConnectionSeeker cs;
+    private static Haku haku;
 
-        Set<String> risteysasemienRadat = tk.risteysasemienRadatSettiin();
-        Set<String> kaikkiRadat = tk.radatSettiin();
-        System.out.println("Risteysradat" + risteysasemienRadat.toString());
-        System.out.println("Kaikki radat" + kaikkiRadat.toString());
-        for (String rata : tk.radatSettiin()) {
-            List<String> paikat = tk.etsiRadanVarrellaOlevatAsemat(rata);
-            if (paikat.size() > 0) {
-                System.out.println("Rata " + rata + ": " + paikat);
-            }
+    public static void main(String[] args) throws IOException {
+
+        alustaJunahaku();
+        kaynnistaJunahaku();
+    }
+
+    private static void alustaJunahaku() {
+        tk = new Tiedonkasittely();
+        jj = new JunaJson();
+        cs = new ConnectionSeeker(tk.listaaRisteysasemat(), tk.listaaAsemat());
+        haku = new Haku(jj, cs);
+    }
+
+    private static void kaynnistaJunahaku() {
+        Scanner lukija = new Scanner(System.in);
+        while (true) {
+            System.out.print("Anna lähtöasema: ");
+            String departure = lukija.nextLine();
+            System.out.print("Anna pääteasema: ");
+            String arrival = lukija.nextLine();
+            haku.junaHaku(departure, arrival);
         }
     }
 }

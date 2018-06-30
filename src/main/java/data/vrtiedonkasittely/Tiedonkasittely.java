@@ -33,6 +33,17 @@ public class Tiedonkasittely {
     private List<Asema> risteysasemat = new ArrayList<>();
     private Map<String, String> asematLyhenteineen;
 
+    public Tiedonkasittely() {
+        lueRaideosuuksienJSONData();
+        lueAsemienJSONData();
+        matkustajaAsematLyhenteineen();
+        irrotaRatatiedot();
+        lisaaAsemienNimet();
+        selvitäRisteysasemat();
+        asematJsoniksi();
+        risteysAsematJsoniksi();
+    }
+
     public void lueRaideosuuksienJSONData() {
         String baseurl = "https://rata.digitraffic.fi/api/v1";
         try {
@@ -57,8 +68,20 @@ public class Tiedonkasittely {
         }
     }
 
+    public void matkustajaAsematLyhenteineen() {
+        asematLyhenteineen = new HashMap<>();
+        for (Station station : stations) {
+            if (station.isPassengerTraffic()) {
+                this.asematLyhenteineen.put(station.getStationShortCode(), station.getStationName());
+            }
+        }
+    }
+
     public void irrotaRatatiedot() {
         asemat = new HashSet<>();
+        Asema yv = new Asema("YV");//Ylivieska puuttuu (jostain tuntemattomasta syystä) risteysasemien joukosta, vaikka siellä kohtaavat kaksi rataa. Toinen rata lisätty tässä.
+        yv.addTrack("087");
+        asemat.add(yv);
         for (Raideosuus r : raideosuudet) {
             String tunnus = r.getStation();
             if (tarkistetaanRelevanssi(tunnus)) {
@@ -81,10 +104,15 @@ public class Tiedonkasittely {
         }
     }
 
+    public void lisaaAsemienNimet() {
+        for (Asema a : asemat) {
+            String tunnus = a.getStation();
+            a.setName(asematLyhenteineen.get(tunnus));
+        }
+    }
+
     public void selvitäRisteysasemat() {
-        System.out.println("Matkustaja-asemat yhteensä " + asemat.size());
         this.risteysasemat = asemat.stream().filter(a -> a.getTrack().size() > 1).collect(Collectors.toList());
-        System.out.println("Risteysasemat poiston jälkeen " + risteysasemat.size());
         Set<String> poistettavat = new HashSet<>();
         poistettavat.add("ILR 650");//Ilmalan ratapihan, Käpylän ja Pasilan yhdistävä rata. Tätä ei voi suodattaa millään järkevällä muulla konstilla.
         for (String rata : radatSettiin()) {
@@ -93,7 +121,6 @@ public class Tiedonkasittely {
                 poistettavat.add(rata);
             }
         }
-        System.out.println("Poistettavia ratoja " + poistettavat.size());
         poistettavat.stream().forEach(p -> {
             this.risteysasemat.stream().forEach(r -> {
                 if (r.getTrack().contains(p)) {
@@ -102,14 +129,6 @@ public class Tiedonkasittely {
             });
         });
         this.risteysasemat = this.risteysasemat.stream().filter(a -> a.getTrack().size() > 1).collect(Collectors.toList());
-        System.out.println("Risteysasemat poiston jälkeen " + risteysasemat.size());
-    }
-
-    public void lisaaAsemienNimet() {
-        for (Asema a : asemat) {
-            String tunnus = a.getStation();
-            a.setName(asematLyhenteineen.get(tunnus));
-        }
     }
 
     public void risteysAsematJsoniksi() {
@@ -161,15 +180,6 @@ public class Tiedonkasittely {
         return false;
     }
 
-    public void matkustajaAsematLyhenteineen() {
-        asematLyhenteineen = new HashMap<>();
-        for (Station station : stations) {
-            if (station.isPassengerTraffic()) {
-                this.asematLyhenteineen.put(station.getStationShortCode(), station.getStationName());
-            }
-        }
-    }
-
     public List<String> etsiRadanVarrellaOlevatAsemat(String string) {
         List<String> radanAsemat = new ArrayList<>();
         for (Asema a : asemat) {
@@ -178,5 +188,17 @@ public class Tiedonkasittely {
             }
         }
         return radanAsemat;
+    }
+
+    public List<Asema> listaaRisteysasemat() {
+        return this.risteysasemat;
+    }
+    
+    public Set<Asema> listaaAsemat() {
+        return this.asemat;
+    }
+    
+    public Map<String, String> mappaaAsematLyhenteineen() {
+        return this.asematLyhenteineen;
     }
 }
