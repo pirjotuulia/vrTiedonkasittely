@@ -1,10 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package data.domain.train;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -29,15 +26,61 @@ public class Train {
 
     @Override
     public String toString() {
-        return this.departureDate + " " 
-                + this.trainCategory + " " 
-                + this.commuterLineID + " " 
+        return this.trainCategory + " "
+                + this.commuterLineID + " "
                 + this.trainType + " "
-                + this.trainNumber;
+                + this.trainNumber
+                + " (" + "lähtöasema: " + palautaLahtoaikaLahtoasemalta()
+                + ") (määräasema: " + palautaSaapumisaikaPaateasemalle() + ")";
     }
 
-    
-    
+    public boolean nollastaLoppuun() {
+        LocalDateTime ekaRivi = this.timeTableRows.get(0).palautaLahtoAika();
+        LocalDateTime vikaRivi = this.timeTableRows.get(this.timeTableRows.size() - 1).palautaLahtoAika();
+        if (ekaRivi.compareTo(vikaRivi) < 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public LocalDateTime palautaLahtoaikaLahtoasemalta() {
+        LocalDateTime ekaRivi = this.timeTableRows.get(0).palautaLahtoAika();
+        LocalDateTime vikaRivi = this.timeTableRows.get(this.timeTableRows.size() - 1).palautaLahtoAika();
+        if (nollastaLoppuun()) {
+            return ekaRivi;
+        } else {
+            return vikaRivi;
+        }
+    }
+
+    public LocalDateTime palautaSaapumisaikaPaateasemalle() {
+        LocalDateTime ekaRivi = this.timeTableRows.get(0).palautaLahtoAika();
+        LocalDateTime vikaRivi = this.timeTableRows.get(this.timeTableRows.size() - 1).palautaLahtoAika();
+        if (nollastaLoppuun()) {
+            return vikaRivi;
+        }
+        return vikaRivi;
+    }
+
+    public LocalDateTime palautaPyydettyAikaAsemalta(String lahtoTaiSaapuminen, String shortcode) {
+        return this.timeTableRows.stream()
+                .filter(r -> r.getStationShortCode()
+                .equals(shortcode)).filter(r -> r.getType()
+                .equals(lahtoTaiSaapuminen)).findFirst().get().palautaLahtoAika();
+    }
+
+    public LocalDate palautaLahtoPvm() {
+        LocalDate departureDateAsLocalDate = LocalDate.parse(this.departureDate);
+        return departureDateAsLocalDate;
+    }
+
+    public String palautaLahtoasema() {
+        if (nollastaLoppuun()) {
+            return this.timeTableRows.get(0).getStationShortCode();
+        }
+        return this.timeTableRows.get(this.timeTableRows.size()-1).getStationShortCode();
+    }
+
     public int getTrainNumber() {
         return trainNumber;
     }
@@ -141,6 +184,5 @@ public class Train {
     public void setTimeTableRows(List<TimeTableRows> timeTableRows) {
         this.timeTableRows = timeTableRows;
     }
-    
-    
+
 }

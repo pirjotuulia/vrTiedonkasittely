@@ -10,6 +10,7 @@ import com.fasterxml.jackson.databind.type.CollectionType;
 import java.net.URI;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -27,9 +28,18 @@ public class JunaJson {
             CollectionType tarkempiListanTyyppi = mapper.getTypeFactory().constructCollectionType(ArrayList.class, Train.class);
             junat = mapper.readValue(url, tarkempiListanTyyppi);
         } catch (Exception ex) {
-            System.out.println("Ei suoria junia välille " + departure + "-" + arrival);
             return null;
         }
-        return junat;
+        Iterator<Train> it = junat.iterator();
+        while(it.hasNext()) {
+            Train juna = it.next();
+            if (!juna.getTrainCategory().equals("Long-distance")||!juna.getTrainCategory().equals("Commuter")&&!juna.getTimetableType().equals("REGULAR")) {
+                it.remove();
+            }
+        }
+        if (!junat.isEmpty()) {
+            return junat;
+        }
+        return null;
     }
 }

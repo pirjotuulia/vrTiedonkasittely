@@ -6,11 +6,18 @@ import data.domain.station.Asema;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.type.CollectionType;
+import data.domain.connection.database.Dcd;
+import data.domain.station.Stations;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -19,6 +26,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
@@ -28,20 +37,21 @@ import java.util.stream.Collectors;
 public class Tiedonkasittely {
 
     private List<Raideosuus> raideosuudet;
-    private List<Station> stations;
+    private List<Station> stationsList;
+    private Stations stations;
     private Set<Asema> asemat;
     private List<Asema> risteysasemat = new ArrayList<>();
     private Map<String, String> asematLyhenteineen;
 
     public Tiedonkasittely() {
-        lueRaideosuuksienJSONData();
-        lueAsemienJSONData();
-        matkustajaAsematLyhenteineen();
-        irrotaRatatiedot();
-        lisaaAsemienNimet();
-        selvitäRisteysasemat();
-        asematJsoniksi();
-        risteysAsematJsoniksi();
+        lueRaideosuuksienJSONData();//alustetaan raideosuudet
+        lueAsemienJSONData();//alustetaan asemat
+        matkustajaAsematLyhenteineen();//etsitään matkustaja-asemat ja niiden lyhenteet
+        irrotaRatatiedot();//siirretään ratatiedot kunkin aseman alle
+        lisaaAsemienNimet();// lisätään asemien nimet
+        selvitäRisteysasemat();//selvitetään risteysasemat
+//        asematJsoniksi(); Käytettiin rata-asemalistan JSON-muotoon kirjoittamiseen.
+//        risteysAsematJsoniksi(); Käytettiin risteysasemien JSON-muotoon kirjoittamiseen.
     }
 
     public void lueRaideosuuksienJSONData() {
@@ -62,15 +72,39 @@ public class Tiedonkasittely {
             URL url = new URL(URI.create(String.format("%s/metadata/stations", baseurl)).toASCIIString());
             ObjectMapper mapper = new ObjectMapper();
             CollectionType tarkempiListanTyyppi = mapper.getTypeFactory().constructCollectionType(ArrayList.class, Station.class);
-            this.stations = mapper.readValue(url, tarkempiListanTyyppi);
+            this.stationsList = mapper.readValue(url, tarkempiListanTyyppi);
+            Iterator<Station> it = stationsList.iterator();
+            while(it.hasNext()) {
+                if (!it.next().isPassengerTraffic()) {
+                    it.remove();
+                }
+            }
+            this.stations = new Stations();
+            this.stations.addStations(stationsList);
         } catch (Exception ex) {
             System.out.println(ex);
+        }
+    }
+    
+    private List<String> shortcodet() throws SQLException {
+        List<String> shortcodet = new ArrayList<>();
+        try (Connection con
+                = DriverManager.getConnection("jdbc:mysql://localhost:3306/yhteydet?useSSL=false&serverTimezone=UTC",
+                        "root", "salasana")) {
+            System.out.println("Connection saatu");
+            String sql = "SELECT stationShortCode FROM station WHERE passengerTraffic='true'";
+            PreparedStatement stmt = con.prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                shortcodet.add(rs.getString("stationShortCode"));
+            }
+            return shortcodet;
         }
     }
 
     public void matkustajaAsematLyhenteineen() {
         asematLyhenteineen = new HashMap<>();
-        for (Station station : stations) {
+        for (Station station : stationsList) {
             if (station.isPassengerTraffic()) {
                 this.asematLyhenteineen.put(station.getStationShortCode(), station.getStationName());
             }
@@ -89,13 +123,13 @@ public class Tiedonkasittely {
                 while (rata.length() < 3) {
                     rata = "0" + rata;
                 }
-                if (!asemat.stream().anyMatch(a -> a.getStation().equals(tunnus))) {
+                if (!asemat.stream().anyMatch(a -> a.getShortCode().equals(tunnus))) {
                     Asema asema = new Asema(tunnus);
                     asema.addTrack(rata);
                     asemat.add(asema);
                 } else {
                     for (Asema a : asemat) {
-                        if (a.getStation().equals(tunnus)) {
+                        if (a.getShortCode().equals(tunnus)) {
                             a.addTrack(rata);
                         }
                     }
@@ -106,7 +140,7 @@ public class Tiedonkasittely {
 
     public void lisaaAsemienNimet() {
         for (Asema a : asemat) {
-            String tunnus = a.getStation();
+            String tunnus = a.getShortCode();
             a.setName(asematLyhenteineen.get(tunnus));
         }
     }
@@ -115,6 +149,8 @@ public class Tiedonkasittely {
         this.risteysasemat = asemat.stream().filter(a -> a.getTrack().size() > 1).collect(Collectors.toList());
         Set<String> poistettavat = new HashSet<>();
         poistettavat.add("ILR 650");//Ilmalan ratapihan, Käpylän ja Pasilan yhdistävä rata. Tätä ei voi suodattaa millään järkevällä muulla konstilla.
+        poistettavat.add("141");//Hyvinkään ja Karjaan välinen rata, ei matkustajaliikennettä.
+        poistettavat.add("123");//Kehärata, joka sotkee kaukojunahaun; tämä on lisättävä myöhemmin takaisin.
         for (String rata : radatSettiin()) {
             List<String> paikat = etsiRadanVarrellaOlevatAsemat(rata);
             if (paikat.size() < 2) {
@@ -170,7 +206,7 @@ public class Tiedonkasittely {
     }
 
     private boolean tarkistetaanRelevanssi(String tunnus) {
-        for (Station st : this.stations) {
+        for (Station st : this.stationsList) {
             if (st.getStationShortCode().equals(tunnus)) {
                 if (st.isPassengerTraffic() && st.getType().equals("STATION") || st.getType().equals("STOPPING_POINT")) {
                     return true;
@@ -200,5 +236,13 @@ public class Tiedonkasittely {
     
     public Map<String, String> mappaaAsematLyhenteineen() {
         return this.asematLyhenteineen;
+    }
+    
+    public List<Station> listaaStations() {
+        return this.stationsList;
+    }
+    
+    public Stations annaAsematMapissa() {
+        return this.stations;
     }
 }

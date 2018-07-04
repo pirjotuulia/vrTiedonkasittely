@@ -11,12 +11,12 @@ import java.util.Set;
  * @author Pirjo
  */
 public class Asema {
-    private String station;
+    private String shortCode;
     private Set<String> tracks;
     private String name;
     
-    public Asema(String station) {
-        this.station = station;
+    public Asema(String shortCode) {
+        this.shortCode = shortCode;
         this.tracks = new HashSet<>();
         this.name = "";
     }
@@ -24,13 +24,13 @@ public class Asema {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(this.name).append("(").append(this.station).append(")");
+        sb.append(this.name).append("(").append(this.shortCode).append(")");
         this.tracks.stream().forEach(r -> sb.append(", ").append(r));
         return sb.toString();
     }
 
-    public String getStation() {
-        return station;
+    public String getShortCode() {
+        return shortCode;
     }
 
     public Set<String> getTrack() {
@@ -57,7 +57,7 @@ public class Asema {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 31 * hash + Objects.hashCode(this.station);
+        hash = 31 * hash + Objects.hashCode(this.shortCode);
         hash = 31 * hash + Objects.hashCode(this.tracks);
         return hash;
     }
@@ -74,7 +74,7 @@ public class Asema {
             return false;
         }
         final Asema other = (Asema) obj;
-        if (!Objects.equals(this.station, other.station)) {
+        if (!Objects.equals(this.shortCode, other.shortCode)) {
             return false;
         }
         return true;

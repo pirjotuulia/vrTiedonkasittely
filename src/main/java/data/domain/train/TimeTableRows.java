@@ -6,7 +6,14 @@
 package data.domain.train;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 /**
  *
@@ -28,6 +35,15 @@ public class TimeTableRows {
     private int differenceInMinutes;
     private List<Causes> causes;
     private TrainReady trainReady;
+    private Locale loc = new Locale("fi", "FI");
+
+    public LocalDateTime palautaLahtoAika() {
+        DateTimeFormatter isoFormatter = DateTimeFormatter.ISO_INSTANT;
+        ZoneId defaultZoneId = ZoneId.systemDefault();
+        Instant dateInstant = Instant.from(isoFormatter.parse(this.scheduledTime));
+        LocalDateTime departureTimeAsLocalDateTime = dateInstant.atZone(defaultZoneId).toLocalDateTime();
+        return departureTimeAsLocalDateTime;
+    }
 
     public String getStationShortCode() {
         return stationShortCode;
