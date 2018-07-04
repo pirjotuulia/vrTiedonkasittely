@@ -94,4 +94,8 @@
   "station" : "HPK",
   "name" : "Haapamäki",
   "track" : [ "066", "023" ]
+}, {
+  "station" : "YV",
+  "name" : "Ylivieska",
+  "track" : [ "008", "087" ]
 } ]

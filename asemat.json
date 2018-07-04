@@ -7,10 +7,6 @@
   "name" : "Lentoasema",
   "track" : [ "123" ]
 }, {
-  "station" : "YV",
-  "name" : "Ylivieska",
-  "track" : [ "008" ]
-}, {
   "station" : "AVP",
   "name" : "Aviapolis",
   "track" : [ "123" ]
@@ -706,6 +702,10 @@
   "station" : "PUN",
   "name" : "Punkaharju",
   "track" : [ "014" ]
+}, {
+  "station" : "YV",
+  "name" : "Ylivieska",
+  "track" : [ "008", "087" ]
 }, {
   "station" : "NOA",
   "name" : "Nokia",
